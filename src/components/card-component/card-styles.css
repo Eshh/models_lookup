@@ -15,6 +15,6 @@
 
 .card-container:hover {
     transform: scale(1.10);
-    background-color: rgb(166, 220, 235);
-
+    background-color: rgb(36, 23, 3);
+    color : white;
 }
