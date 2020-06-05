@@ -1,0 +1,20 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(217, 219, 250);
+    border : 1px solid grey;
+    border-radius: 5px;
+    padding: 25px;
+    font-size : 19px;
+    cursor: pointer;   
+    font-family: 'Seaweed Script', cursive; 
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+}
+
+.card-container:hover {
+    transform: scale(1.10);
+    background-color: rgb(166, 220, 235);
+
+}
