@@ -12,9 +12,9 @@ class App extends Component {
     }
   }
   componentDidMount(){
-    fetch('http://dummy.restapiexample.com/api/v1/employees')
+    fetch('https://jsonplaceholder.typicode.com/users')
     .then(res => res.json())
-    .then(json => this.setState({models : json.data}))
+    .then(json => this.setState({models : json}))
   }
   handleChange = (e) =>{this.setState({ searchField : e.target.value})}
 
@@ -22,14 +22,14 @@ class App extends Component {
 
     const { models , searchField } = this.state;
     const filteredModels = models.filter((model) => 
-      model.employee_name.toLowerCase().includes(searchField.toLowerCase()))
+      model.name.toLowerCase().includes(searchField.toLowerCase()))
     return(
       <div className = 'App'>
        <h1>Model Lookup</h1>
     <SearchBox 
      placeholder = 'search models'
      handleChange ={this.handleChange} />
-    <CardList heroines = {filteredModels} />
+    <CardList models = {filteredModels} />
        
       </div>
     )
